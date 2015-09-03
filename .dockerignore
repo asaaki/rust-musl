@@ -1,0 +1,8 @@
+.git
+.gitignore
+*.md
+*.png
+app
+Dockerfile*
+Makefile
+world

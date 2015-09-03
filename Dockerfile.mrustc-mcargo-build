@@ -1,0 +1,2 @@
+FROM asaaki/mrustc:master
+ENTRYPOINT ["/usr/bin/cargo", "build", "--target=x86_64-unknown-linux-musl"]

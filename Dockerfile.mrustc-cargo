@@ -1,0 +1,3 @@
+FROM asaaki/mrustc:master
+ENTRYPOINT ["/usr/bin/cargo"]
+CMD ["-V"]

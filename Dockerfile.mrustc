@@ -1,0 +1,3 @@
+FROM scratch
+ADD ./world/rootfs.tar.gz /
+WORKDIR /app

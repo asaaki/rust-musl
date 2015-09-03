@@ -1,0 +1,3 @@
+FROM asaaki/mrustc:master
+ENTRYPOINT ["/usr/bin/rustc", "--target=x86_64-unknown-linux-musl"]
+CMD ["-V"]
