@@ -24,6 +24,7 @@ SYSFILES=(
   /usr/lib/libgcc_s*
   /usr/lib/libm-*
   /usr/lib/libm.*
+  /usr/lib/libmvec*
   /usr/lib/libncurses*
   /usr/lib/libpthread*
   /usr/lib/libreadline*
