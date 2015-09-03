@@ -3,7 +3,7 @@ ROOTFS       = world/rootfs.tar.gz
 ROOTFS_SIZE  = $(shell du -skh $(ROOTFS) | awk '{print $1}')
 PV_CMD       = pv -W -e -b -s $(ROOTFS_SIZE) -i 0.25 -N "Creating docker image"
 
-all: build package build-images
+all: build package build-images test
 
 build: FORCE
 	@docker build -t asaaki/rust-build .
@@ -45,5 +45,11 @@ run-rustc:
 	@docker run --rm -v `pwd`/app:/app asaaki/mrustc-rustc $(RUN)
 run-cargo:
 	@docker run --rm -v `pwd`/app:/app asaaki/mrustc-cargo $(RUN)
+
+test: FORCE
+	@cd app && \
+		docker run --rm -ti -v `pwd`:/app asaaki/mrustc-mrustc hello.rs && \
+		docker build -t local/rhello . && \
+		docker run --rm local/rhello
 
 FORCE:
