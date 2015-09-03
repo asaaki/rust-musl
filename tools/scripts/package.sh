@@ -12,16 +12,24 @@ SYSFILES=(
   /usr/bin/busybox
   /usr/bin/cc
   /usr/bin/gcc
+  /usr/bin/make
   /usr/bin/ld
   /usr/lib/*crt*
   /usr/lib/ld-*
+  /usr/lib/libatomic_ops**
   /usr/lib/libbfd*
   /usr/lib/libc-*
   /usr/lib/libc_*
   /usr/lib/libc.*
+  /usr/lib/libcrypt.*
   /usr/lib/libcrypto*
   /usr/lib/libdl*
+  /usr/lib/libffi*
   /usr/lib/libgcc_s*
+  /usr/lib/libgc.*
+  /usr/lib/libgmp*
+  /usr/lib/libguile*
+  /usr/lib/libltdl*
   /usr/lib/libm-*
   /usr/lib/libm.*
   /usr/lib/libmvec*
@@ -31,6 +39,7 @@ SYSFILES=(
   /usr/lib/librt*
   /usr/lib/libssl*
   /usr/lib/libstdc++*
+  /usr/lib/libunistring*
   /usr/lib/libz*
   /usr/lib/gcc
 )
